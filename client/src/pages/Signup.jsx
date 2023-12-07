@@ -21,9 +21,11 @@ const Signup = () => {
   }, []);
 
   const fetchUsers = () => {
-    axios.get("http://localhost:3001/register").then((res) => {
-      console.log(res.data);
-    });
+    axios
+      .get("https://real-pink-cygnet-hem.cyclic.app/register")
+      .then((res) => {
+        console.log(res.data);
+      });
   };
 
   const handleRegister = (event) => {
@@ -42,7 +44,7 @@ const Signup = () => {
     }
 
     axios
-      .post("http://localhost:3001/register", {
+      .post("https://real-pink-cygnet-hem.cyclic.app/register", {
         email: email,
         username: username,
         password: password,

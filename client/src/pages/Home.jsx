@@ -22,7 +22,7 @@ const Home = () => {
     const userId = localStorage.getItem("userId");
     const token = localStorage.getItem("token"); // Replace with actual key
     axios
-      .get(`http://localhost:3001/home/`, {
+      .get(`https://real-pink-cygnet-hem.cyclic.app/home`, {
         headers: {
           Authorization: `${token}`,
         },

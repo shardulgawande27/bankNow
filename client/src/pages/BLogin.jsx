@@ -15,18 +15,23 @@ const BLogin = () => {
   }, []);
 
   const fetchUsers = () => {
-    axios.get("http://localhost:3001/register").then((res) => {
-      console.log(res.data);
-    });
+    axios
+      .get("https://real-pink-cygnet-hem.cyclic.app/register")
+      .then((res) => {
+        console.log(res.data);
+      });
   };
 
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3001/login/banker", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "https://real-pink-cygnet-hem.cyclic.app/login/banker",
+        {
+          username,
+          password,
+        }
+      );
       const token = response.data.token;
       alert("login successful");
       setUsername("");

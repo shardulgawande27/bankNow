@@ -18,7 +18,7 @@ const Customers = () => {
     const token = localStorage.getItem("token");
 
     axios
-      .get(`http://localhost:3001/customers`, {
+      .get(`https://real-pink-cygnet-hem.cyclic.app/customers`, {
         headers: {
           Authorization: `${token}`,
         },
